@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/ldcu-logo.png" alt="LDCU Logo" class="ldcu-logo" />
+        <h1>Tabulation System v1.0</h1>
+        <img src="assets/itlogo.png" alt="LDCU Logo" class="it-logo" />
+      </div>
+      <div class="nav-right"></div>
+    </nav>
+
+    <form id="scoreForm" onsubmit="handleSubmit(event)">
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Maximum Rating</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Criteria 1</td>
+            <td>40%</td>
+            <td>
+              <input
+                type="number"
+                name="criteria1"
+                class="score-input"
+                onchange="calculateTotal()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Criteria 2</td>
+            <td>60%</td>
+            <td>
+              <input
+                type="number"
+                name="criteria2"
+                class="score-input"
+                onchange="calculateTotal()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>TOTAL</td>
+            <td>100</td>
+            <td id="total-score">0.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="https://facebook.com" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://twitter.com" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a href="https://linkedin.com" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://instagram.com" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="footer-center">
+        <p>
+          Email:
+          <a href="mailto:your.email@example.com"
+            >marshivanquintila@gmail.com</a
+          >
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/MarshESC" target="_blank">MarshESC</a>
+        </p>
+      </div>
+      <div class="footer-right">
+        <p class="dev">Developed by Marsh Ivan H. Quintila</p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

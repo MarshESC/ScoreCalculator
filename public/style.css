@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding-top: 160px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #850d16;
+  color: #ffd700;
+  padding: 0;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo Styling */
+.ldcu-logo,
+.it-logo {
+  width: 140px;
+  height: 140px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Logo Container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+/* Center Text Styling */
+.logo h1 {
+  color: #ffd700;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Centering the Form */
+form#scoreForm {
+  background-color: #ffffff;
+  padding: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+/* Score Table Styling */
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.score-table th,
+.score-table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.score-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+#total-score {
+  font-weight: bold;
+  color: #333;
+}
+
+.score-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #850d16;
+  color: #ffd700;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #660000;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #850d16;
+  color: #ffd700;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left a,
+.footer-center a {
+  color: #ffd700;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-left i {
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.footer-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.footer-left a:hover,
+.footer-center a:hover {
+  color: #f4f4f9;
+}
+
+footer .footer-left,
+footer .footer-right {
+  flex: 1;
+}
+
+footer .footer-center {
+  flex: 2;
+}
+
+.footer-center p {
+  margin: 5px 0;
+}
+
+.footer-left a {
+  margin: 0 15px;
+}
+
+.footer-center a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.dev {
+  color: #ffd700;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (max-width 600px) */
+@media (max-width: 600px) {
+  .navbar {
+    height: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .ldcu-logo,
+  .it-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  form#scoreForm {
+    width: 90%;
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .score-table th,
+  .score-table td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer-left,
+  .footer-right {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer-center {
+    margin-top: 10px;
+  }
+}
+
+/* Medium devices (600px - 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .ldcu-logo,
+  .it-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  form#scoreForm {
+    width: 85%;
+    margin-top: 20px;
+  }
+
+  .score-table th,
+  .score-table td {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .submit-button {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
