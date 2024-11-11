@@ -4,7 +4,15 @@ function calculateTotal() {
 
   // Sum up all criteria scores
   for (let input of inputs) {
-    const value = parseFloat(input.value) || 0; // Default to 0 if not a valid number
+    let value = parseFloat(input.value) || 0;
+
+    // Check if the value exceeds 100
+    if (value > 100) {
+      value = 100;
+      input.value = 100; // Set the input value back to 100
+      showMessage("Score cannot exceed 100. Value adjusted to 100.", true);
+    }
+
     total += value;
   }
 
@@ -81,4 +89,21 @@ function clearMessage() {
 // Recalculate total when inputs change
 document.querySelectorAll(".score-input").forEach((input) => {
   input.addEventListener("input", calculateTotal);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("theme-toggle");
+
+  // Load theme from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const theme = document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light";
+    localStorage.setItem("theme", theme);
+  });
 });

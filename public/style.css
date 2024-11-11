@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #32323c;
   padding-top: 160px;
   overflow-y: auto;
   scroll-snap-type: y mandatory;
@@ -60,7 +60,7 @@ body {
 
 /* Centering the Form */
 form#scoreForm {
-  background-color: #ffffff;
+  background-color: #242020;
   padding: 0 20px;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -87,13 +87,15 @@ form#scoreForm {
 .score-table th,
 .score-table td {
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #800000;
   text-align: center;
+  color: #ffd700;
 }
 
 .score-table th {
-  background-color: #f8f9fa;
+  background-color: #242020;
   font-weight: bold;
+  color: #ffd700;
 }
 
 #total-score {
@@ -105,9 +107,11 @@ form#scoreForm {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #d41b1b;
   border-radius: 4px;
   box-sizing: border-box;
+  color: #ffd700;
+  background-color: #800000;
 }
 
 /* Submit Button Styling */
